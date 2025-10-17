@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apurva — Engineering Portfolio</title>
+  <meta name="description" content="Projects, experiments, and notes by Apurva.">
+  <meta property="og:title" content="Apurva — Engineering Portfolio">
+  <meta property="og:description" content="Projects, experiments, and notes by Apurva.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-cover.jpg">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav container">
+    <a href="#home" class="brand" aria-label="Home">
+      <img src="assets/favicon.svg" alt="" width="24" height="24">
+      <span>Apurva</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#projects">Projects</a>
+      <a href="#gallery">Media</a>
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="pill">Contact</a>
+      <button id="theme" class="icon" title="Toggle theme" aria-label="Toggle theme">🌙</button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero container">
+      <h1>Designing powertrains &amp; propulsion systems.</h1>
+      <p class="sub">DFR Powertrain lead and hands-on engineer. Building, testing, and documenting what I learn.</p>
+      <div class="row">
+        <a class="btn" href="#projects">See projects</a>
+        <a class="btn ghost" href="#about">About</a>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <button class="media" data-open="exhaust">
+            <img src="assets/sample-exhaust.jpg" alt="4-2-1 exhaust system" loading="lazy">
+          </button>
+          <div class="card-body">
+            <h3>4-2-1 Equal-Length Exhaust</h3>
+            <p>Wave-tuned near 7k RPM, TIG welded Ti, validated with track data.</p>
+            <ul class="tags"><li>FSAE</li><li>Fabrication</li><li>CFD</li></ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="media" href="assets/rocket-static-fire.mp4" aria-label="Open video">
+            <video src="assets/rocket-static-fire.mp4" preload="metadata" muted playsinline></video>
+            <span class="badge">▶</span>
+          </a>
+          <div class="card-body">
+            <h3>Model Rocket Static Fire</h3>
+            <p>Load-cell thrust stand + Arduino DAQ and analysis.</p>
+            <ul class="tags"><li>Propulsion</li><li>Test</li><li>DAQ</li></ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="media" href="#" aria-label="Open case study">
+            <img src="assets/sample-intake.jpg" alt="Composite intake plenum" loading="lazy">
+          </a>
+          <div class="card-body">
+            <h3>Carbon Plenum + ITBs</h3>
+            <p>Volumetric efficiency study; MAP &amp; lambda logging.</p>
+            <ul class="tags"><li>Composites</li><li>Calibration</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section container">
+      <h2>Media</h2>
+      <div class="masonry">
+        <figure>
+          <img src="assets/sample-weld.jpg" alt="TIG weld stack of dimes">
+          <figcaption>TIG practice (CP2 Ti)</figcaption>
+        </figure>
+        <figure class="video">
+          <video src="assets/pit-walkthrough.mp4" preload="metadata" muted playsinline></video>
+          <figcaption>Competition pit walkthrough</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/sample-rocket.jpg" alt="Rocket on launch rail">
+          <figcaption>DARS launch day</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="writing" class="section container">
+      <h2>Writing</h2>
+      <ul class="posts">
+        <li><a class="post" href="#"><span>Pressure-wave tuning notes</span><time datetime="2025-07-01">Jul 2025</time></a></li>
+        <li><a class="post" href="#"><span>Static fire checklist</span><time datetime="2025-06-12">Jun 2025</time></a></li>
+      </ul>
+    </section>
+
+    <section id="about" class="section container about">
+      <img class="avatar" src="assets/avatar.png" alt="Apurva headshot" width="128" height="128">
+      <div>
+        <h2>About</h2>
+        <p>I lead Powertrain at Dallas Formula Racing and tinker with propulsion systems.
+        Interests: exhaust wave dynamics, test engineering, and scrappy R&amp;D.</p>
+        <ul class="quick">
+          <li>📍 Dallas, TX</li>
+          <li>🎓 UTD — Comp Eng.</li>
+          <li>🛠️ MATLAB, SolidWorks, Arduino</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <div class="contact">
+        <a class="btn" href="mailto:hello@example.com">Email me</a>
+        <button class="btn ghost" data-copy="hello@example.com">Copy email</button>
+        <div class="socials">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="YouTube">YouTube</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <small>© <span id="year"></span> Apurva • Built with HTML/CSS/JS • GitHub Pages</small>
+  </footer>
+
+  <dialog id="viewer" class="viewer">
+    <button class="close" aria-label="Close">✕</button>
+    <img alt="Preview">
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
